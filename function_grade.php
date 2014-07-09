@@ -1,36 +1,40 @@
 <?php
-function getGrade()
+function getGrade($marks)
 {
-   $marks=79;
+   //$marks=79;
 
 if($marks>79 && $marks<=100)
 {
-    echo "Grade: A+";
+    $grade= 'A+';
 }
 elseif($marks>69 && $marks<80)
 {
-    echo "Grade: A";
+    $grade= 'A';
 }
 elseif($marks>59 && $marks<70)
 {
-    echo "Grade: A-";
+    $grade= 'A-';
 }
 elseif($marks>49 && $marks<60)
 {
-    echo "Grade: B";
+    $grade= 'B';
 }
 elseif($marks>39 && $marks<50)
 {
-    echo "Grade: C";
+    $grade= 'C';
 }
 elseif($marks>69 && $marks<80)
     {
-    echo "Grade: D";
+    $grade= 'D';
     }
  else
  {
-     echo "Grade: F";
+     $grade= 'F';
  }
+ 
+ return $grade;
 }
 
-echo getGrade();
+//calling function
+
+echo getGrade(77);
