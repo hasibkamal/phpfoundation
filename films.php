@@ -1,7 +1,4 @@
 <?php
-
-function info_by_genre($inputgenre)
-{
 $films = array("genres" => array("comedy", "tragedy","action","romance"),
                "film_titles"=>array("Big","Star Wars", "Titanic", "French Kiss"),
                "stars" => array("Bill Murray", "Mark Hammel", "Leonard DiCaprio", "Cate Blanchette"),
@@ -10,6 +7,13 @@ $films = array("genres" => array("comedy", "tragedy","action","romance"),
 $genre=$films["genres"];
 $film_title= $films["film_titles"];
 $star = $films["stars"];
+
+
+function info_by_genre($inputgenre)
+{
+global $genre;
+global $film_title;
+global $star;
 
 if($inputgenre==$genre[0])
 {
