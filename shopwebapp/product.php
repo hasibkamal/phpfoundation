@@ -22,7 +22,12 @@ class Product
         $this->product_id = $product_id;
     }
 
-    public function set_product_quantity($product_quantity) {
+//    public function set_product_quantity($product_quantity) {
+//        $this->product_quantity = $product_quantity;
+//    }
+    public function update_product_quantity($product_id, $product_quantity)
+    {
+        $this->product_id = $product_id;
         $this->product_quantity = $product_quantity;
     }
 

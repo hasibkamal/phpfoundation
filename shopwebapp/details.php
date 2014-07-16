@@ -26,7 +26,7 @@
           
           foreach($shop->get_all_products() as $a_product)
           {   /* @var $a_product Product */      
-              echo $a_product->get_product_id();
+              echo $a_product->get_product_id()."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
               echo $a_product->get_product_quantity()."<br/>";
           }        
           

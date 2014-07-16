@@ -20,18 +20,30 @@ class Shop
 
     public function add_product($a_product)
     {
-//        foreach ($product_list as $product) 
-//        { /* @var $product Product */
-//         if($product->get_product_id()== $product->get_product_id())
-//         {
-//           $product->get_product_quantity()=$product->get_product_quantity();  
-//         }
-//         else
-//         {
+        if(count($this->product_list)<1){
              $this->product_list[] = $a_product;
-             return 'Product added.';
-//         }
-//        }
+             return 'Product added1.';            
+        }
+        else
+        {
+            foreach ($this->product_list as $product) 
+            { 
+                /* @var $product Product */
+             if($product->get_product_id()== $a_product->get_product_id())
+             {
+              $amount= $product->get_product_quantity() + $a_product->get_product_quantity();
+              $product->update_product_quantity($a_product->get_product_id(), $amount);
+              echo 'Product is updated.';
+              break;
+             }
+             else
+                {
+                 $this->product_list[] = $a_product;
+                 return 'Product added2.';
+                 break;
+                }
+            }            
+        }
         
     }
     
