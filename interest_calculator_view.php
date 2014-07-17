@@ -26,6 +26,7 @@
            $total_amount = $calculator->calculate_total_amount();
 
             echo "Result: ".$calculator->total_amount;
+            
            //echo "Result: ".$total_amount;
          
         }
