@@ -26,6 +26,7 @@ if(isset($_POST['submitButton']))
     //echo $id.' '.$name.' '.$salary;
     
     echo  $an_employee->id.' '.$an_employee->name.' '. $an_employee->salary;
+    
 }
 
 ?>
